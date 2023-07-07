@@ -47,13 +47,13 @@ export async function parseDocx() {
         const imageExist = await checkImageExist(docxPath);
         console.log(`Images in ${docx}: ${imageExist}`);
         if (imageExist) {
-          resultContentWithImages += `DOCX file: ${docx}\n`;
+          resultContentWithImages += `${docx}\n`;
         } else {
-          resultContentWithoutImages += `DOCX file: ${docx}\n`;
+          resultContentWithoutImages += `${docx}\n`;
         }
       } catch (error) {
         console.error(`Error processing DOCX ${docx}: ${error}`);
-        resultContentWithoutImages += `==> DOCX file: ${docx}, Error: ${error.message}\n`;
+        resultContentWithoutImages += `==> Error: ${docx}, Error: ${error.message}\n`;
       }
     }
 

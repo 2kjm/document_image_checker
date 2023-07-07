@@ -40,13 +40,13 @@ export async function parsePdf() {
         const images = await exportImages(pdfPath, tempPath);
         console.log("Exported", images.length, "images");
         if (images.length > 0) {
-          resultContentWithImages += `PDF file: ${pdf}, No. of exported images: ${images.length}\n`;
+          resultContentWithImages += `${pdf}, No. of exported images: ${images.length}\n`;
         } else {
-          resultContentWithoutImages += `PDF file: ${pdf}, No. of exported images: ${images.length}\n`;
+          resultContentWithoutImages += `${pdf}, No. of exported images: ${images.length}\n`;
         }
       } catch (error) {
         console.error(`Error processing PDF ${pdf}: ${error}`);
-        resultContentWithoutImages += `==> PDF file: ${pdf}, Error: ${error.message}\n`;
+        resultContentWithoutImages += `==> ERROR: ${pdf}, Error: ${error.message}\n`;
       }
     }
 
