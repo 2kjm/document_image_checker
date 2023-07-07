@@ -1,0 +1,12 @@
+{
+  "name": "doc_parsing",
+  "version": "1.0.0",
+  "main": "parser.js",
+  "license": "MIT",
+  "type": "module",
+  "author": "Karunjith M",
+  "dependencies": {
+    "mammoth": "^1.6.0",
+    "pdf-export-images": "^1.0.9"
+  }
+}
